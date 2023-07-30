@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Archivio Video di Zeb89</title>
+  <title>Pagine Sfogliabili di Testo</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: magenta;
       text-align: center;
-      padding: 50px;
     }
-    h1 {
-      color: white;
-      font-size: 40px;
+    .book-container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f7f7f7;
+    }
+    .page {
+      display: none;
+      height: 200px;
+      overflow: auto;
+      padding: 10px;
+    }
+    .page.active {
+      display: block;
+    }
+    .nav-buttons {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>Benvenuti nell'Archivio Video di Zeb89!</h1>
+  <div class="book-container">
+    <div class="page active">
+      <h2>Pagina 1</h2>
+      <p>Testo della pagina 1...</p>
+    </div>
+    <div class="page">
+      <h2>Pagina 2</h2>
+      <p>Testo della pagina 2...</p>
+    </div>
+    <div class="page">
+      <h2>Pagina 3</h2>
+      <p>Testo della pagina 3...</p>
+    </div>
+    <!-- Aggiungi altre pagine qui -->
+    <div class="nav-buttons">
+      <button onclick="prevPage()">Precedente</button>
+      <button onclick="nextPage()">Successiva</button>
+    </div>
+  </div>
+
+  <script>
+    let currentPage = 0;
+    const pages = document.querySelectorAll('.page');
+
+    function showPage(index) {
+      pages.forEach((page, i) => {
+        if (i === index) {
+          page.classList.add('active');
+        } else {
+          page.classList.remove('active');
+        }
+      });
+    }
+
+    function nextPage() {
+      if (currentPage < pages.length - 1) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    }
+  </script>
 </body>
 </html>
