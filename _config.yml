@@ -1,0 +1,59 @@
+# Basic Config
+title: Your GitHub Pages Website Title
+description: A short description of your website
+theme: jekyll-theme-minimal
+
+# Custom Domain (if you have one)
+# Uncomment and replace 'yourcustomdomain.com' with your actual domain
+# domain: yourcustomdomain.com
+
+# GitHub Pages Settings
+# By default, GitHub Pages will build from the 'master' branch
+# Uncomment the next line if you are using a different branch
+# branch: gh-pages
+
+# Exclude files/folders from being processed by GitHub Pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Custom Configuration
+# Add any custom settings specific to your project or theme
+# For example, if your theme has its own customization options
+
+# Plugins
+# If you are using any Jekyll plugins, list them here
+# plugins:
+#   - jekyll-seo-tag
+
+# Additional settings as needed for your project
+# ...
+
+# Navigation Links
+# If your theme supports navigation links, you can specify them here
+# nav:
+#   - title: Home
+#     url: /
+
+# Build settings
+# For most cases, the defaults should work just fine
+# If you need to customize the build process, you can add configuration here
+
+# Uncomment the next line to enable Jekyll's incremental build
+# incremental: false
+
+# Uncomment the next line to enable Jekyll's strict front matter
+# strict_front_matter: true
+
+# Uncomment the next line to set the timezone for your site
+# timezone: UTC
+
+# Markdown Options
+# If you need to customize the behavior of Markdown, add configuration here
+
+# Remote Theme (if you're using one)
+# If you're using a remote theme, uncomment the following lines
+# and replace 'username/repo' with the theme repository you want to use
+# remote_theme: username/repo
+
