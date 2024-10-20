@@ -1,1 +1,56 @@
-<h3>Work In Progress</h3>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina con Sfondo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-size: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Nero trasparente */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Benvenuto nella mia pagina!</h1>
+        <p>Questo è un esempio di testo sopra uno sfondo trasparente.</p>
+    </div>
+
+    <script>
+        // Array delle immagini di sfondo
+        const images = [
+            'backgrounds/1.jpg',
+            'backgrounds/.jpg'
+            // Aggiungi altre immagini qui
+        ];
+
+        // Seleziona un'immagine casuale
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+
+        // Imposta l'immagine di sfondo
+        document.body.style.backgroundImage = `url('${randomImage}')`;
+    </script>
+</body>
+</html>
+
